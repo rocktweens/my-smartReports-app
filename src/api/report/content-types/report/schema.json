@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reports",
+  "info": {
+    "singularName": "report",
+    "pluralName": "reports",
+    "displayName": "Report"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string"
+    },
+    "tipo": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "ingresos",
+        "gastos"
+      ]
+    },
+    "fechaCargaInicio": {
+      "type": "date"
+    },
+    "fechaUltimaCarga": {
+      "type": "date"
+    },
+    "fechaProcesado": {
+      "type": "date"
+    },
+    "archivo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
+    }
+  }
+}
