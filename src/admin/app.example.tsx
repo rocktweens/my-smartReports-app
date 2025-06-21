@@ -1,4 +1,5 @@
-import type { StrapiApp } from '@strapi/strapi/admin';
+/* import type { StrapiApp } from '@strapi/strapi/admin';
+import type { Page } from '@strapi/strapi/admin';
 
 export default {
   config: {
@@ -35,3 +36,4 @@ export default {
     console.log(app);
   },
 };
+ */

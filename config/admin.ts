@@ -17,4 +17,6 @@ export default ({ env }) => ({
     nps: env.bool('FLAG_NPS', true),
     promoteEE: env.bool('FLAG_PROMOTE_EE', true),
   },
+  locales: ['es'], // Lista de idiomas disponibles
+  defaultLocale: 'es', // Idioma por defecto
 });
