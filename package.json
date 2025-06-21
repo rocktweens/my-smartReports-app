@@ -16,7 +16,8 @@
     "start": "strapi start",
     "strapi": "strapi",
     "upgrade": "npx @strapi/upgrade latest",
-    "upgrade:dry": "npx @strapi/upgrade latest --dry"
+    "upgrade:dry": "npx @strapi/upgrade latest --dry",
+    "postinstall": "cd src/plugins/cargar-reportes && npm install"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.828.0",
@@ -52,4 +53,5 @@
     "uuid": "1916f856-8016-42ac-96d3-ed774ace65b4",
     "installId": "54868f74560cdbb36bfbb2e484dda69af03c9bc6718fd829108bf91aedf5edc6"
   }
+  
 }
