@@ -1,5 +1,12 @@
-import React from "react";
-import { Box, Heading, Text, VStack } from "@chakra-ui/react";
+import React from 'react';
+import {
+  Box,
+  Typography,
+  Stack,
+  ContentLayout,
+  HeaderLayout,
+  Main,
+} from '@strapi/design-system';
 import { useIntl } from 'react-intl';
 import { getTranslation } from '../utils/getTranslation';
 import CargaDeReporte from '../components/CargaDeReporte';
@@ -8,21 +15,32 @@ const HomePage = () => {
   const { formatMessage } = useIntl();
 
   return (
-    <Box p={8} bg="gray.50" minH="100vh">
-      <VStack align="start" spaceX={6}>
-        <Heading as="h1" size="lg">
-          {formatMessage({ id: getTranslation('plugin.name'), defaultMessage: 'Nombre del plugin' })}
-        </Heading>
+    <>
+      <HeaderLayout
+        title={formatMessage({
+          id: getTranslation('plugin.name'),
+          defaultMessage: 'Nombre del plugin',
+        })}
+      />
 
-        <Box bg="white" p={6} rounded="md" shadow="md" w="100%">
-          <Heading as="h2" size="md" mb={2}>
-            Carga de Reportes
-          </Heading>
-          <Text mb={4}>Subí tus reportes en Excel para analizarlos</Text>
-          <CargaDeReporte />
-        </Box>
-      </VStack>
-    </Box>
+      <Main>
+        <ContentLayout>
+          <Stack spacing={4}>
+            <Box background="neutral0" padding={6} hasRadius shadow="tableShadow">
+              <Typography variant="beta" as="h2">
+                Carga de Reportes
+              </Typography>
+
+              <Typography variant="pi" textColor="neutral600" marginTop={2} marginBottom={4}>
+                Subí tus reportes en Excel para analizarlos
+              </Typography>
+
+              <CargaDeReporte />
+            </Box>
+          </Stack>
+        </ContentLayout>
+      </Main>
+    </>
   );
 };
 

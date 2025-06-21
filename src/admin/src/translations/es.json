@@ -6,5 +6,10 @@
   "cloud.plugin.name": "Nube",
   "review-workflows.plugin.name":"Revision de Flujos",
   "Settings.application.header":"Aplicacion",
-  "global.localeToggle.label": "Seleccionar lenguaje"
+  "global.localeToggle.label": "Seleccionar lenguaje",
+  "global.more.actions":"Mas acciones",
+  "content-type-builder.search.placeholder": "Buscar",
+  "api::report.report": "Reportes",
+  "plugin::users-permissions.user": "Usuario",
+  "app.utils.drag": "Arrastrar"
 }

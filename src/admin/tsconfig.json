@@ -15,6 +15,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["../plugins/**/admin/src/**/*", "./"],
+  "include": ["../plugins/**/admin/src/**/*", "./", "../plugins/cargar-reportes/admin/src/extensions", "../plugins/cargar-reportes/admin/src/extensions"],
   "exclude": ["node_modules/", "build/", "dist/", "**/*.test.ts"]
 }
