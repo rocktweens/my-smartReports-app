@@ -11,5 +11,7 @@
   "content-type-builder.search.placeholder": "Buscar",
   "api::report.report": "Reportes",
   "plugin::users-permissions.user": "Usuario",
-  "app.utils.drag": "Arrastrar"
+  "app.utils.drag": "Arrastrar",
+  "Report": "Reportes",
+  "User": "Usuarios"
 }

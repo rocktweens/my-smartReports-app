@@ -2,9 +2,6 @@ import React from 'react';
 import {
   Box,
   Typography,
-  Stack,
-  ContentLayout,
-  HeaderLayout,
   Main,
 } from '@strapi/design-system';
 import { useIntl } from 'react-intl';
@@ -16,7 +13,7 @@ const HomePage = () => {
 
   return (
     <>
-      <HeaderLayout
+      <Box
         title={formatMessage({
           id: getTranslation('plugin.name'),
           defaultMessage: 'Nombre del plugin',
@@ -24,8 +21,8 @@ const HomePage = () => {
       />
 
       <Main>
-        <ContentLayout>
-          <Stack spacing={4}>
+        <Box padding={6}>
+          <Box spacing={4}>
             <Box background="neutral0" padding={6} hasRadius shadow="tableShadow">
               <Typography variant="beta" as="h2">
                 Carga de Reportes
@@ -37,8 +34,8 @@ const HomePage = () => {
 
               <CargaDeReporte />
             </Box>
-          </Stack>
-        </ContentLayout>
+          </Box>
+        </Box>
       </Main>
     </>
   );
