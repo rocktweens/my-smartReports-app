@@ -373,6 +373,40 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiChatsBotChatsBot extends Struct.CollectionTypeSchema {
+  collectionName: 'chats_bots';
+  info: {
+    displayName: 'ChatsBot';
+    pluralName: 'chats-bots';
+    singularName: 'chats-bot';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    entidad_de: Schema.Attribute.String & Schema.Attribute.Required;
+    fecha_hora: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::chats-bot.chats-bot'
+    > &
+      Schema.Attribute.Private;
+    mensaje: Schema.Attribute.Text;
+    publishedAt: Schema.Attribute.DateTime;
+    remitente: Schema.Attribute.Enumeration<['cliente', 'bot', 'manual']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'manual'>;
+    respondido_manual: Schema.Attribute.Boolean;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiReportReport extends Struct.CollectionTypeSchema {
   collectionName: 'reports';
   info: {
@@ -916,6 +950,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::chats-bot.chats-bot': ApiChatsBotChatsBot;
       'api::report.report': ApiReportReport;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

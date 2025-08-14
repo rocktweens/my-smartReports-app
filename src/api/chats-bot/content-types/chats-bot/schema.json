@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chats_bots",
+  "info": {
+    "singularName": "chats-bot",
+    "pluralName": "chats-bots",
+    "displayName": "ChatsBot"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "entidad_de": {
+      "type": "string",
+      "required": true
+    },
+    "mensaje": {
+      "type": "text"
+    },
+    "remitente": {
+      "type": "enumeration",
+      "required": true,
+      "default": "manual",
+      "enum": [
+        "cliente",
+        "bot",
+        "manual"
+      ]
+    },
+    "fecha_hora": {
+      "type": "datetime",
+      "required": true
+    },
+    "respondido_manual": {
+      "type": "boolean"
+    }
+  }
+}
