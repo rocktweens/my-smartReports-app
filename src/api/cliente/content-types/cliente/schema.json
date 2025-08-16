@@ -41,7 +41,7 @@
           "localized": true
         }
       },
-      "required": true,
+      "required": false,
       "unique": true
     }
   }
