@@ -6,7 +6,7 @@ export default {
     console.log(ctx.request.body);
     const { entidad_de, nombre, es_manual } = ctx.request.body.data;
 
-    if (!entidad_de || !nombre) {
+    if (!entidad_de) {
       return ctx.badRequest("Faltan datos: entidad_de o nombre");
     }
 
